@@ -1,0 +1,36 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <OutputType>Library</OutputType>
+    <RootNamespace>MSBuildAssemblyLoader</RootNamespace>
+    <PackageId>MSBuildAssemblyLoader</PackageId>
+    <Authors>Eric Woodruff</Authors>
+    <Company>Eric Woodruff</Company>
+    <Product>Sandcastle</Product>
+    <PackageDescription>Sandcastle Help File Builder and Tools</PackageDescription>
+    <Description>This assembly contains the project, build engine, and Managed Extensibility Framework (MEF) classes used by all of the other Sandcastle Help File Builder applications.</Description>
+    <Copyright>Copyright © 2006-2020, Eric Woodruff, All Rights Reserved</Copyright>
+    <PackageProjectUrl>https://github.com/EWSoftware/SHFB</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/EWSoftware/SHFB</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MS-PL</PackageLicenseExpression>
+    <PackageTags>Sandcastle;Help;Builder;Utilities</PackageTags>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Version>19.11.17</Version>
+    <InformationalVersion Condition="'$(Configuration)'=='Release'">Release Build</InformationalVersion>
+    <InformationalVersion Condition="'$(Configuration)'!='Release'">Debug Build</InformationalVersion>
+    <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <AssemblyName>MSBuildAssemblyLoader</AssemblyName>
+    <OutputPath>..\bin\$(Configuration)</OutputPath>
+    <DocumentationFile>$(OutputPath)\$(TargetFramework)\MSBuildAssemblyLoader.xml</DocumentationFile>
+  </PropertyGroup>
+  
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Build.Tasks.Core" Version="16.4.0" />
+  </ItemGroup>
+
+</Project>
