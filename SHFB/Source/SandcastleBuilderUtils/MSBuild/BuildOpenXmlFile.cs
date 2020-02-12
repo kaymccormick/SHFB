@@ -31,12 +31,12 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using System.Xml;
 using System.Xml.Linq;
-
+using Ionic.Zip ;
 using Microsoft.Build.Framework;
 using Microsoft.Build.Utilities;
 using Microsoft.Win32;
 
-using Ionic.Zip;
+
 
 namespace SandcastleBuilder.Utils.MSBuild
 {
